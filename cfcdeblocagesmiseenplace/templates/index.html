@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>{{ gettext('Demandes de prêts') }}</h1>
+    <form action="{{ url_for('search') }}" method="get">
+        <input type="text" name="query" placeholder="Rechercher...">
+        <button type="submit">Rechercher</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>{{ gettext('N° client') }}</th>
+                <th>{{ gettext('Noms/Raison sociale') }}</th>
+                <th>{{ gettext('Adresse') }}</th>
+                <th>{{ gettext('Téléphone') }}</th>
+                <th>{{ gettext('Date de dépôt') }}</th>
+                <th>{{ gettext('Type de prêt') }}</th>
+                <th>{{ gettext('Montant') }}</th>
+                <th>{{ gettext('Statut') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for loan in loan_requests %}
+                <tr>
+                    <td>{{ loan['client_number'] }}</td>
+                    <td>{{ loan['name'] }}</td>
+                    <td>{{ loan['address'] }}</td>
+                    <td>{{ loan['phone'] }}</td>
+                    <td>{{ loan['date'] }}</td>
+                    <td>{{ loan['type'] }}</td>
+                    <td>{{ loan['amount'] }}</td>
+                    <td>{{ loan['status'] }}</td>
+                    <td><a href="{{ url_for('delete_loan', loan_id=loan['id']) }}">Supprimer</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination">
+        {% if page > 1 %}
+            <a href="{{ url_for('index', page=page-1) }}">Précédent</a>
+        {% endif %}
+        <span>Page {{ page }}</span>
+        {% if page < total_pages %}
+            <a href="{{ url_for('index', page=page+1) }}">Suivant</a>
+        {% endif %}
+    </div>
+{% endblock %}

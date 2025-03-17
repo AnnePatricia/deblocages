@@ -1,0 +1,544 @@
+*, html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: var(--deblocagesTransition);
+}
+:root{
+    --deblocagesBrown: #782E18;
+    --deblocagesYellow: #FFA51C;
+    --deblocagesLightYellow: #FFC671;
+    --deblocagesLighterYellow: #FFE8C5;
+    --deblocagesDarkYellow: #D48917;
+    --deblocagesDarkBrown: #4D281C;
+    --deblocagesWhite: #F4F4F4;
+    --deblocagesBlack: #1B1B1B;
+    --deblocagesPureWhite: #FFFFFF;
+    --deblocagesPureBlack: #000000;
+    --deblocagesGray: #999999;
+    --deblocagesDarkGray: #484848;
+    --deblocagesLightGray: #C9C9C9;
+    --deblocagesDarkerGray: #292929;
+    --deblocagesLighterGray: #E9E9E9;
+    --deblocagesLightGreen: #ADF7CB;
+    --deblocagesGreen: #18783E;
+    --deblocagesLightRed: #F7ADBC;
+    --deblocagesRed: #CE2020;
+    --deblocagesDarkRed: #A43636;    
+    --deblocagesTransition: all .48s ease-in-out;
+    --deblocagesBoxShadow: 0 0 128px 0 rgba(0, 0, 0, .1);
+}
+
+body{
+    color: var(--deblocagesBlack);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--deblocagesPureWhite);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* DESIGN SYSTEM */
+/* typography */
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.1;
+}
+h1{
+    font-size: 3.2rem;
+}
+h2{
+    font-size: 2.1rem;
+}
+h3{
+    font-size: 1.64rem;
+}
+h4{
+    font-size: 1.32rem;
+}
+h5{
+    font-size: 1.16rem;
+}
+h6{
+    font-size: 1.08rem;
+}
+/* typography */
+
+a, a:visited, a:hover, a:focus{
+    text-decoration: none;
+    color: var(--deblocagesBrown);
+}
+.deblocage-container{
+    width: 92%;
+}
+.deblocage-position-relative{
+    position: relative;
+}
+.deblocage-position-absolute{
+    position: absolute;
+}
+.deblocage-position-fixed{
+    position: fixed;
+}
+.deblocage-position-sticky{
+    position: sticky;
+}
+.deblocage-bottom-0{
+    bottom: 0;
+}
+.deblocage-top-0{
+    top: 0;
+}
+.deblocage-left-0{
+    left: 0;
+}
+.deblocage-right-0{
+    right: 0;
+}
+.deblocage-flex{
+    display: flex;
+}
+.deblocage-grid{
+    display: grid;
+}
+.deblocage-none{
+    display: none;
+}
+.deblocage-block{
+    display: block;
+}
+.deblocage-flex-column{
+    flex-direction: column;
+}
+.deblocage-space-between{
+    justify-content: space-between;
+}
+.deblocage-align-center{
+    align-items: center;
+}
+.deblocage-with-100{
+    width: 100%;
+}
+.deblocage-height-100{
+    height: 100%;
+}
+.deblocage-height-100vh{
+    height: 100vh;
+}
+.deblocage-width-100vw{
+    width: 100vw;
+}
+.deblocage-with-auto{
+    width: auto;
+}
+.deblocage-with-auto{
+    height: auto;
+}
+.deblocage-svg{
+    height: 16px;
+}
+.deblocage-margin-auto{
+    margin: auto;
+}
+.deblocage-bg-color-transparent{
+    background-color: transparent;
+}
+.deblocage-input-transparent{
+    border: none;
+    outline: none;
+}
+/* Buttons */
+.deblocage-btn{
+    padding: 8px 16px;
+    border: none;
+    font-size: 14px;
+    background-color: var(--deblocagesYellow);
+    color: var(--deblocagesBlack);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.deblocage-btn:hover{
+    background-color: var(--deblocagesDarkYellow);
+    color: var(--deblocagesWhite);
+}
+.deblocage-btn-primary{
+    background-color: var(--deblocagesBrown);
+    color: var(--deblocagesWhite);
+}
+.deblocage-btn-primary:hover, .deblocage-btn-primary:focus{
+    background-color: var(--deblocagesDarkBrown);
+}
+.deblocage-btn-secondary{
+    background-color: var(--deblocagesGray);
+    color: var(--deblocagesWhite);
+}
+.deblocage-btn-secondary:hover, .deblocage-btn-secondary:focus{
+    background-color: var(--deblocagesDarkGray);
+}
+/* Buttons */
+/* DESIGN SYSTEM */
+
+/* HEADER */
+#deblocage-header{
+    padding: 16px 0;
+    border-bottom: 1px solid var(--deblocagesLighterGray);
+    background-color: var(--deblocagesPureWhite);
+}
+#deblocage-header #deblocage-logo img{
+    height: 48px;
+}
+#deblocage-logo a span, #deblocage-logo a:visited span,
+#deblocage-logo a:hover span, #deblocage-logo a:focus span{
+    color: var(--deblocagesBrown);
+    font-size: 32px;
+}
+#deblocage-logo .deblocage-flex{
+    gap: 8px;
+}
+#deblocage-header .deblocage-svg{
+    height: 24px;
+}
+#deblocage-header .deblocage-header-right{
+    gap: 16px;
+}
+.deblocage-search-form-container{
+    width: 48%;
+}
+.deblocage-search-form{
+    border-radius: 32px;
+    padding: 8px 8px 8px 24px;
+    background-color: var(--deblocagesWhite);
+}
+.deblocage-search-form input{
+    display: flex;
+    color: var(--deblocagesBlack);
+}
+#deblocage-header .deblocage-btn-search{
+    border-radius: 50%;
+    padding: 8px 8px 7px;
+}
+#deblocage-header .deblocage-btn-search .deblocage-magnifier{
+    height: 16px;
+}
+#deblocage-header .deblocage-bell,
+#deblocage-header .deblocage-logout{
+    fill: var(--deblocagesBrown);
+    cursor: pointer;
+}
+#deblocage-header .deblocage-bell:hover,
+#deblocage-header .deblocage-logout:hover{
+    fill: var(--deblocagesDarkBrown);
+}
+.deblocage-logout-wrapper{
+    align-items: center;
+    padding-right: 16px;
+    gap: 4px;
+}
+#deblocage-logout-language{
+    border-radius: 8px;
+    align-items: center;
+    background-color: var(--deblocagesYellow);
+    font-weight: 500;
+}
+.deblocage-lang-wrapper{
+    padding: 16px 12px 16px 16px;
+    border-right: 1px solid var(--deblocagesDarkYellow);
+}
+.deblocage-logout-wrapper{
+    padding: 16px 16px 16px 12px;
+}
+#deblocage-header .deblocage-header-right .deblocage-logout{
+    height: 16px;
+}
+.deblocage-connecte-entant p{
+    color: var(--deblocagesGray);
+    margin: 0;
+    line-height: 1.2;
+    font-size: 12px;
+}
+.deblocage-connecte-entant p strong{
+    color: var(--deblocagesDarkBrown);
+    font-size: 14px;
+}
+/* HEADER */
+
+/* MAIN */
+
+/* Login page */
+#deblocage-main{
+    padding: 64px 0;
+}
+.deblocage-login{
+    box-shadow: var(--deblocagesBoxShadow);
+    border-radius: 32px;
+    width: fit-content;
+    padding:64px;
+    gap: 24px;
+}
+.deblocage-login h2{
+    text-align: center;
+}
+.deblocage-login h2 img{
+    width: 48px;
+    margin-bottom: 8px;
+}
+.deblocage-login h2 span{
+    font-size: 16px;
+}
+.deblocage-login-form{
+    gap: 12px;
+}
+.deblocage-login-form .deblocage-input-label .deblocage-input-container{
+    border: 1px solid var(--deblocagesLightGray);
+    padding: 8px;
+    border-radius: 8px;
+}
+#deblocage-svg-eye-off, #deblocage-svg-eye-on{cursor: pointer; width:16px;}
+/*.deblocage-input-label label{
+    margin-bottom: 4px;
+}*/
+/* Login page */
+
+/* Demandes de prêts */
+#deblocage-tableau-prêts-container{
+    border-radius: 16px;
+    border: 1px solid var(--deblocagesLightGray);
+}
+#deblocage-tableau-prêts-container h2{
+    color: var(--deblocagesBrown);
+    padding: 32px;
+}
+.deblocage-tableau-prêts,
+.deblocage-tableau-prêts-header{
+    width: 100%;
+}
+.deblocage-tableau-prêts-header td{
+    color: var(--deblocagesGray);
+    width: fit-content;
+    cursor: pointer;
+}
+.deblocage-tableau-prêts-header td:hover{
+    color: var(--deblocagesDarkGray);
+}
+.deblocage-tableau-prêts-header td:hover svg{
+    fill: var(--deblocagesDarkGray);
+}
+.deblocage-tableau-prêts td{
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--deblocagesLighterGray);
+}
+.deblocage-tableau-prêts tbody tr.deblocage-tableau-prets-body{
+    cursor: pointer;
+}
+.deblocage-tableau-prêts tbody tr.deblocage-tableau-prets-body:hover{
+    background-color: var(--deblocagesWhite);
+}
+.deblocage-tableau-prêts tfoot td{
+    padding: 16px 32px;
+    border-bottom: none;
+    vertical-align: middle;
+}
+.deblocage-tableau-prêts tfoot td a,
+.deblocage-tableau-prêts tfoot td a:visited{
+    padding: 16px;
+    color: var(--deblocagesBlack);
+}
+.deblocage-tableau-prêts tfoot td a:hover,
+.deblocage-tableau-prêts tfoot td a:focus{
+    color: var(--deblocagesBrown);
+}
+.deblocage-tableau-prêts tfoot td svg{
+    height: 12px;
+    fill: var(--deblocagesGray);
+}
+.deblocage-tableau-prêts tfoot td a:hover svg{
+    fill: var(--deblocagesBrown);
+}
+.deblocage-tableau-prêts .deblocage-arrow-bottom{
+    fill: var(--deblocagesGray);
+    height: 6px;
+}
+.deblocage-tableau-prêts-footer td{
+    width: 100%;
+}
+.deblocage-statut{
+    padding: 4px 8px;
+    border-radius: 32px;
+    font-weight: 500;
+}
+.deblocage-statut-attente{
+    color: var(--deblocagesDarkYellow);
+    background-color: var(--deblocagesLightYellow);
+}
+.deblocage-statut-attente{
+    color: var(--deblocagesDarkYellow);
+    background-color: var(--deblocagesLightYellow);
+}.deblocage-statut-valide{
+    color: var(--deblocagesDarkYellow);
+    background-color: var(--deblocagesLightYellow);
+}.deblocage-statut-expire{
+    color: var(--deblocagesDarkYellow);
+    background-color: var(--deblocagesLightYellow);
+}.deblocage-statut-renouveler{
+    color: var(--deblocagesDarkYellow);
+    background-color: var(--deblocagesLightYellow);
+}
+/* Demandes de prêts */
+
+/* Détails de la demande de prêt */
+
+#deblocage-demande-de-prets-single{
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: var(--deblocagesWhite);
+    gap: 16px;
+}
+#deblocage-demande-de-prets-header{
+    background-color: var(--deblocagesLighterGray);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--deblocagesLightGray);
+}
+#deblocage-demande-de-prets-single h2{
+    font-size: 24px;
+    color: var(--deblocagesBrown);
+}
+.deblocage-btn-group{
+    gap: 8px;
+}
+#deblocage-demande-de-prets-single .deblocage-btn-group .deblocage-btn{
+    gap: 4px;
+}
+#deblocage-demande-de-prets-single a, #deblocage-demande-de-prets-single a:visited{
+    color: var(--deblocagesWhite);
+}
+#deblocage-accordion-container .deblocage-accordion-elt a, #deblocage-accordion-container .deblocage-accordion-elt a:visited{
+    color: var(--deblocagesBrown);
+}
+#deblocage-accordion-container .deblocage-accordion-elt a:hover, #deblocage-accordion-container .deblocage-accordion-elt a:focus{
+    color: var(--deblocagesDarkBrown);
+}
+#deblocage-demande-de-prets-single .deblocage-btn-annuler{
+    background-color: var(--deblocagesRed);
+}
+#deblocage-demande-de-prets-single .deblocage-btn-quitter{
+    background-color: var(--deblocagesGray);
+}
+#deblocage-demande-de-prets-single .deblocage-btn-renouveler{
+    background-color: var(--deblocagesYellow);
+}
+#deblocage-demande-de-prets-single .deblocage-btn-annuler:hover, #deblocage-demande-de-prets-single .deblocage-btn-annuler:focus{
+    background-color: var(--deblocagesDarkRed);
+}
+#deblocage-demande-de-prets-single .deblocage-btn-quitter:hover, #deblocage-demande-de-prets-single .deblocage-btn-quitter:focus{
+    background-color: var(--deblocagesDarkGray);
+}
+#deblocage-demande-de-prets-single .deblocage-btn-renouveler:hover, #deblocage-demande-de-prets-single .deblocage-btn-renouveler:focus{
+    background-color: var(--deblocagesDarkYellow);
+}
+
+#deblocage-demande-de-prets-single .deblocage-btn-annuler svg{
+    fill: var(--deblocagesWhite);
+}
+#deblocage-demande-de-prets-single .deblocage-btn-quitter svg{
+    fill: var(--deblocagesWhite);
+}
+#deblocage-demande-de-prets-single .deblocage-btn-renouveler svg{
+    fill: var(--deblocagesWhite);
+}
+
+.deblocage-demande-de-prets-details{
+    border-radius: 8px;
+    border: 1px solid var(--deblocagesLightGray);
+}
+#deblocage-demande-de-prets-body .deblocage-demande-de-prets-details h2{
+    color: var(--deblocagesBlack);
+    font-size: 24px;
+    padding: 32px 32px 24px;
+    border-bottom: 1px solid var(--deblocagesLightGray);
+}
+#deblocage-demande-de-prets-body .deblocage-demande-de-prets-details h3{
+    font-size: 20px;
+}
+#deblocage-accordion-container, .deblocage-submit-group{
+    padding: 32px;
+    gap: 32px;
+}
+.deblocage-btn-submit-group{
+    gap: 8px;
+}
+.deblocage-submit-group{
+    padding-top: 0;
+    gap: 16px;
+}
+.deblocage-submit-group .deblocage-flex{
+    align-items: center;
+    gap: 8px;
+}
+.deblocage-accordion-headings .deblocage-cacher{
+    background-color: transparent;
+    width: fit-content;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: var(--deblocagesBrown);
+}
+.deblocage-accordion-headings .deblocage-cacher svg{
+    height: 8px;
+    fill: var(--deblocagesBrown);
+}
+.deblocage-accordion-elt{
+    gap: 16px;
+}
+.deblocage-accordion-text-single {
+    border-bottom: 1px solid var(--deblocagesLightGray);
+    padding-bottom: 8px;
+}
+.deblocage-accordion-text-title{
+    min-width: 512px;
+}
+.deblocage-accordion-elt .deblocage-accordion-text .deblocage-accordion-text-desc .deblocage-svg{
+    height: 16px;
+    fill: var(--deblocagesBlack);
+}
+.deblocage-accordion-elt .deblocage-accordion-text .deblocage-accordion-text-desc,
+.deblocage-accordion-elt .deblocage-accordion-text .deblocage-accordion-text-desc a{
+    gap: 8px;
+}
+.deblocage-accordion-elt .deblocage-accordion-text .deblocage-accordion-text-desc a svg{
+    fill: var(--deblocagesBrown) !important;
+}.deblocage-accordion-elt .deblocage-accordion-text .deblocage-accordion-text-desc a:hover svg{
+    fill: var(--deblocagesDarkBrown) !important;
+}
+/* Détails de la demande de prêt */
+/* Accordion*/
+.deblocage-accordion-elt{
+    overflow: hidden;
+    height: 36px;
+}
+.deblocage-accordion-elt-active{
+    height: fit-content;
+}
+/* Accordion*/
+/* MAIN */
+
+/* FOOTER */
+#deblocage-footer{
+    border-top: 1px solid var(--deblocagesLighterGray);
+    padding: 32px 0;
+}
+#deblocage-footer p{
+    text-align: center;
+}
+/* FOOTER */
+
+.deblocage-error-message-wrapper{
+    text-align: center;
+    color: var(--deblocagesDarkRed);
+    text-align: center;
+    padding: 16px 0;
+}

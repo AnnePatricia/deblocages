@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails de la demande de prêt</title>
+    <style>
+        .deblocage-flex {
+            display: flex;
+        }
+        .deblocage-flex-column {
+            flex-direction: column;
+        }
+        .deblocage-accordion-elt {
+            margin-bottom: 20px;
+        }
+        .deblocage-accordion-headings {
+            background-color: #f1f1f1;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .deblocage-accordion-text {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="deblocage-demande-de-prets-details">
+        <h2>{{ data.FULLNAME_ }}</h2>
+        <div class="deblocage-flex deblocage-flex-column">
+            <!-- Informations personnelles -->
+            <div class="deblocage-accordion-elt deblocage-accordion-elt-active deblocage-flex deblocage-flex-column">
+                <div class="deblocage-accordion-headings deblocage-flex deblocage-flex-column">
+                    <h3>Informations personnelles</h3>
+                    <button class="deblocage-cacher">
+                        <span class="deblocage-cacher-text">Cacher</span>
+                    </button>
+                </div>
+                <div class="deblocage-accordion-text deblocage-flex deblocage-flex-column">
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Unité</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.UNITCODE_ }}</p>
+                        </div>
+                    </div>
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Numéro du client</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.CLIENTCODE_ }}</p>
+                        </div>
+                    </div>
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Produit</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.PRODUCTCODE_ }}</p>
+                        </div>
+                    </div>
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Capital nominal</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.CAPITALNOMINAL_ }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informations sur le prêt -->
+            <div class="deblocage-accordion-elt deblocage-flex deblocage-flex-column">
+                <div class="deblocage-accordion-headings deblocage-flex deblocage-flex-column">
+                    <h3>Informations sur le prêt</h3>
+                    <button class="deblocage-cacher">
+                        <span class="deblocage-cacher-text">Cacher</span>
+                    </button>
+                </div>
+                <div class="deblocage-accordion-text deblocage-flex deblocage-flex-column">
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Montant</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.CAPITALNOMINAL_ }}</p>
+                        </div>
+                    </div>
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Date de début</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.STARTDATE_ }}</p>
+                        </div>
+                    </div>
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Date de fin</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.ENDDATE_ }}</p>
+                        </div>
+                    </div>
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>RIB</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.RIB_ }}</p>
+                        </div>
+                    </div>
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Code banque</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>{{ data.BANKCODE_ }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informations sur le chantier -->
+            <div class="deblocage-accordion-elt deblocage-flex deblocage-flex-column">
+                <div class="deblocage-accordion-headings deblocage-flex deblocage-flex-column">
+                    <h3>Informations sur le chantier</h3>
+                    <button class="deblocage-cacher">
+                        <span class="deblocage-cacher-text">Cacher</span>
+                    </button>
+                </div>
+                <div class="deblocage-accordion-text deblocage-flex deblocage-flex-column">
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Visite de chantier</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <p>12 Janvier 2025</p> <!-- Exemple de date -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation -->
+            <div class="deblocage-accordion-elt deblocage-flex deblocage-flex-column">
+                <div class="deblocage-accordion-headings deblocage-flex deblocage-flex-column">
+                    <h3>Documentation</h3>
+                    <button class="deblocage-cacher">
+                        <span class="deblocage-cacher-text">Cacher</span>
+                    </button>
+                </div>
+                <div class="deblocage-accordion-text deblocage-flex deblocage-flex-column">
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Bordereau notaire</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <a href="#" download="bordereau-notaire-12-01-2025.pdf">Télécharger</a>
+                        </div>
+                    </div>
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Bordereau assureur</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <a href="#" download="bordereau-assureur-12-01-2025.pdf">Télécharger</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conditionnalités primo -->
+            <div class="deblocage-accordion-elt deblocage-flex deblocage-flex-column">
+                <div class="deblocage-accordion-headings deblocage-flex deblocage-flex-column">
+                    <h3>Conditionnalités primo</h3>
+                    <button class="deblocage-cacher">
+                        <span class="deblocage-cacher-text">Cacher</span>
+                    </button>
+                </div>
+                <div class="deblocage-accordion-text deblocage-flex deblocage-flex-column">
+                    <div class="deblocage-accordion-text-single deblocage-flex">
+                        <div class="deblocage-accordion-text-title">
+                            <p>Demande manuscrite</p>
+                        </div>
+                        <div class="deblocage-accordion-text-desc">
+                            <a href="#">Modifier</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

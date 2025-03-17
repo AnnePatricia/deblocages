@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Le Crédit Foncier du Cameroun (CFC) est un établissement public à caractère commercial. Il est doté d'une personnalité juridique et de l'autonomie financière. Il à pour objet social d'apporter son concours financier à la réalisation de tout projet destiné à promouvoir l'habitat." />
+    <meta name="rights" content="Crédit Foncier du Cameroun" />
+    <meta name="keywords" content="Crédit Foncier du Cameroun, test, Déblocages, Prêts, Crédit, Habitat, Immobilier, Financement, Banque, Cameroun, CFC" />
+    <meta name="author" content="Ifeyi Batindek" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Crédit Foncier du Cameroun" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.creditfoncier.cm/" />
+    <meta property="og:image" content="https://www.creditfoncier.cm/images/stories/cfc/logo.png" />
+    <meta property="og:site_name" content="Crédit Foncier du Cameroun" />
+    <meta property="fb:admins" content="creditfonciercameroun" />
+    <meta property="og:description" content="Le Crédit Foncier du Cameroun (CFC) est un établissement public à caractère commercial. Il est doté d'une personnalité juridique et de l'autonomie financière. Il à pour objet social d'apporter son concours financier à la réalisation de tout projet destiné à promouvoir l'habitat." />
+
+    <title>
+      {% block titre %}
+
+      {% endblock %}– CFC
+    </title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'deblocagesassets/deblocagesfavicons/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'deblocagesassets/deblocagesfavicons/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'deblocagesassets/deblocagesfavicons/favicon-16x16.png' %}" />
+    <link rel="manifest" href="{% static 'deblocagesassets/deblocagesfavicons/site.webmanifest' %}" />
+
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'deblocagesassets/deblocagesstyles/deblocagescss.css' %}?v=0.02" />
+  </head>
+
+  {% block main %}
+
+  {% endblock %}
+  {% include 'footer.html' %}
+</html>
